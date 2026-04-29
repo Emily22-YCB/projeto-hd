@@ -1,0 +1,157 @@
+/* reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* variáveis CSS */
+:root {
+    --color-light: #f4f4f4;
+    --color-orange: #ff6600;
+    --color-dark: #111;
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    background-color: var(--color-dark);
+}
+
+/* Formatações para elementos que sempre se repetem  */
+
+a {
+    color: var(--color-light);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+a:hover {
+    color: var(--color-orange);
+}
+
+ul, ol {
+    list-style: none;
+}
+
+
+
+/* hero da página */
+.hero {
+    height: 100dvh;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, .3)),
+    url(../images/motos/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: var(--color-light);
+}
+
+.header-hero {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: var(--spacing-md);
+}
+
+.hero-menu {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.cta {
+    height: calc(100dvh - 100px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-lg);
+}
+
+.cta h2 {
+    font-size: 10vmin;
+}
+
+.cta p {
+    width: 50%;
+    font-size: 3vmin;
+    font-weight: 500;
+    line-height: 1.6;
+    text-wrap: balance;
+}
+
+.btn {
+    border: 2px solid var(--color-orange);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: 80px;
+    background-color: var(--color-orange);
+    transition: .5s;
+}
+
+.btn:hover {
+    background-color: transparent;
+
+}
+
+.setinha {
+    animation: arrow 2s infinite linear;
+}
+
+/* Animação da seta do cta */
+@keyframes arrow {
+    0%,
+    100% {
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+    
+}
+
+.motos {
+    height: 100dvh;
+    width: 90%;
+    padding: var(--spacing-md);
+    background-color: var(--color-dark); 
+    color: var(--color-light); 
+    margin: var(--spacing-sm) auto;
+}
+
+.grid-motos {
+    width: 100%; /*O 'gri-motos' está ocupando 100% dos 90% do 'Motos', pois no tml 'grid-motos' está dentro de 'motos' */
+}
+
+.moto-item {
+    width: 30%;
+
+}
+
+.moto-item img {
+    width: 100%; /* Esse 100% esta ocupando o 30% do 'moto-item'*/
+}
+
+.motos h2 {
+    font-size: 8vmin;
+
+}
+
+.color-orange {
+    color: var(--color-orange);
+}
+
+
+
+.conheca, .galeria {
+    height: 100dvh;
+}
